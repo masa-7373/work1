@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #6c6b6b;
+}
+
+.header {
+    background-color: #ff9a4b;
+    height: 50px;
+}
+
+main {
+    display: flex;
+    width: 960px;
+    margin: 50px auto;
+}
+
+.box {
+    width: 300px;
+    padding: 10px;
+    background-color: #eeeeee;
+    position: relative;
+}
+
+.box:first-child {
+    margin-right: 30px;
+}
+
+.box:nth-child(2) {
+    margin-right: 30px;
+}
+
+.step {
+    background-color: #ff9a4b;
+    color: white;
+    position: absolute;/*absolute*/
+    /*左上に詰めることができる*/
+    top: 0;
+    left: 0;
+}
+
+.step1_image {
+    background-image: url(img/flow01.png);
+    background-position: bottom; /*解答 centerにすると、サンプルのように下が切れるため*/
+    background-size: cover;
+    height: 150px;
+}
+
+.step2_image {
+    background-image: url(img/flow02.png);
+    background-position: bottom; /*解答*/
+    background-size: cover;
+    height: 150px;
+}
+
+.step3_image {
+    background-image: url(img/flow03.png);
+    background-position: bottom; /*解答*/
+    background-size: cover;
+    height: 150px;
+}
+
+.title {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+.footer {
+    background-color: #AAAAAA;
+    height: 50px;
+}
+
+@media screen and (max-width: 768px){
+    main {
+        flex-direction: column; /*Flexboxを縦並びにする*/
+        width: 100%; /*画面幅100%*/
+    }
+
+    .box {
+        width: 90%;
+        margin: 20px 20px auto;
+    }
+
+    .box :last-child {
+        margin-bottom: 0;
+    }
+
+}
